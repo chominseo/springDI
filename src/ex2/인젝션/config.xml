@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans
+   	    https://www.springframework.org/schema/beans/spring-beans.xsd
+        
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<context:annotation-config/>
+	<context:component-scan base-package="ex2.인젝션"/>
+	<!--
+   <bean id="exam" class="ex2.인젝션.DefaultExam">
+       1. setter함수 이용하기 
+            
+      <property name="kor">
+         <value>1</value>
+      </property>
+      <property name="eng" value="1"/>
+      <property name="math" value="1"/>-->
+     
+      
+      <!-- 2. 생성자함수 이용하기 -->
+      <!-- 기본 
+      <constructor-arg value="1"/>
+      <constructor-arg value="2"/>      
+      <constructor-arg value="3"/>
+      -->
+      <!-- 인덱스로 생성자에 넣을 순서 지정해주기
+      <constructor-arg index="0" value="1"/>
+      <constructor-arg index="1" value="2"/>      
+      <constructor-arg index="2" value="3"/>      
+      -->
+      <!-- 이름으로 생성자에 넣을 순서 지정해주기 
+      <constructor-arg name="eng" value="1"/>
+      <constructor-arg name="math" value="2"/>      
+      <constructor-arg name="kor" value="3"/>
+      
+   </bean>
+   -->
+   <!--<bean id="console" class="ex2.인젝션.ExamConsole">
+       <property name="exam" ref="exam"/>
+      name에는 setter함수(setExam -> exam), 값이면 name, 래퍼런스면 ref 
+   </bean>-->
+
+</beans>
